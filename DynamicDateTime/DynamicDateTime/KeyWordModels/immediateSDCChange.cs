@@ -3,6 +3,9 @@ namespace DynamicDateTime.KeyWordModels
 {
     public class ImmediateSDCChange
     {
+        /// <summary>
+        /// Current
+        /// </summary>
         public string Current => "current";
 
 
