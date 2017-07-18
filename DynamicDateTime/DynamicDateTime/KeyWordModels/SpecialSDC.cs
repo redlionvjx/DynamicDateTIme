@@ -1,7 +1,7 @@
 ﻿
 namespace DynamicDateTime.KeyWordModels
 {
-    public class SpecialSDCChange
+    public class SpecialSDC
     {
         public string First => "first";
 

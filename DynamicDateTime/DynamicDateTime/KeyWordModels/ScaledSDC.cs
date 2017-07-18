@@ -1,7 +1,7 @@
 ﻿
 namespace DynamicDateTime.KeyWordModels
 {
-    public class ScaledSDCChange
+    public class ScaledSDC
     {
         public string Post => "post";
 

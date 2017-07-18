@@ -57,6 +57,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpecialSDCUnitTest.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DynamicDateTime\DynamicDateTime.csproj">
+      <Project>{70f9558e-ada8-4b28-9b37-61079cf61d98}</Project>
+      <Name>DynamicDateTime</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

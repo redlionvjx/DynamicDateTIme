@@ -1,7 +1,10 @@
 ﻿
 namespace DynamicDateTime.KeyWordModels
 {
-    public class ImmediateSDCChange
+    /// <summary>
+    /// Immediate key words to change standard date component
+    /// </summary>
+    public class ImmediateSDC
     {
         /// <summary>
         /// Current

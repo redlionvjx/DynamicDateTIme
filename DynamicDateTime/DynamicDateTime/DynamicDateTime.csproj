@@ -43,12 +43,16 @@
     <Compile Include="DateCreator.cs" />
     <Compile Include="KeyWordModels\IDateComponent.cs" />
     <Compile Include="IDateCreator.cs" />
-    <Compile Include="IKeyWordParser.cs" />
-    <Compile Include="KeyWordModels\ImmediateSDCChange.cs" />
-    <Compile Include="KeyWordModels\ScaledSDCChange.cs" />
-    <Compile Include="KeyWordModels\SpecialSDCChange.cs" />
+    <Compile Include="KeyWordParsers\IKeyWordParser.cs" />
+    <Compile Include="KeyWordModels\ImmediateSDC.cs" />
+    <Compile Include="KeyWordModels\ScaledSDC.cs" />
+    <Compile Include="KeyWordModels\SpecialSDC.cs" />
     <Compile Include="KeyWordModels\StandardDateComponent.cs" />
-    <Compile Include="KeyWordParser.cs" />
+    <Compile Include="DateParser.cs" />
+    <Compile Include="KeyWordParsers\ImmediateSDCParser.cs" />
+    <Compile Include="KeyWordParsers\ScaledSDCParser.cs" />
+    <Compile Include="KeyWordParsers\SpecialSDCParser.cs" />
+    <Compile Include="KeyWordParsers\SstandDateComponentParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

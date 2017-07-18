@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DynamicDateTime
+namespace DynamicDateTime.KeyWordParsers
 {
     public interface IKeyWordParser
     {

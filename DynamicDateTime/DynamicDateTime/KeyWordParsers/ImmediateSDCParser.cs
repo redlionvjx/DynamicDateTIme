@@ -1,8 +1,11 @@
 ﻿using System;
 
-namespace DynamicDateTime
+namespace DynamicDateTime.KeyWordParsers
 {
-    public class KeyWordParser : IKeyWordParser
+    /// <summary>
+    /// Class to parse ImmediateSDC
+    /// </summary>
+    public class ImmediateSDCParser : IKeyWordParser
     {
         public DateTime ParseDate(string dateExpression, DateTime dependentDate = new DateTime())
         {
