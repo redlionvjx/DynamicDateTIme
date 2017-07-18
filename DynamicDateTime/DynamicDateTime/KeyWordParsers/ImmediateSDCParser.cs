@@ -1,4 +1,5 @@
 ﻿using System;
+using DynamicDateTime.DateModel;
 
 namespace DynamicDateTime.KeyWordParsers
 {
@@ -7,7 +8,7 @@ namespace DynamicDateTime.KeyWordParsers
     /// </summary>
     public class ImmediateSDCParser : IKeyWordParser
     {
-        public DateTime ParseDate(string dateExpression, DateTime dependentDate = new DateTime())
+        public DynamicDate ParseDate(string dateExpression, DateTime dependentDate = new DateTime())
         {
             throw new NotImplementedException();
         }

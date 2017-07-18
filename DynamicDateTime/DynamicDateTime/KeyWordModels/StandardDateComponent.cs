@@ -6,10 +6,10 @@ namespace DynamicDateTime.KeyWordModels
     /// </summary>
     public class StandardDateComponent
     {
-        public string Day => "day";
+        public static string Day => "day";
 
-        public string Month => "month";
+        public static string Month => "month";
 
-        public string Year => "year";
+        public static string Year => "year";
     }
 }

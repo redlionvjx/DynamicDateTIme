@@ -1,10 +1,11 @@
 ﻿using System;
+using DynamicDateTime.DateModel;
 
 namespace DynamicDateTime.KeyWordParsers
 {
     public class SpecialSDCParser : IKeyWordParser
     {
-        public DateTime ParseDate(string dateExpression, DateTime dependentDate = new DateTime())
+        public DynamicDate ParseDate(string dateExpression, DateTime dependentDate = new DateTime())
         {
             throw new NotImplementedException();
         }

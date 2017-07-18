@@ -3,10 +3,10 @@ namespace DynamicDateTime.KeyWordModels
 {
     public class SpecialSDC
     {
-        public string First => "first";
+        public static string First => "first";
 
-        public string Last => "last";
+        public static string Last => "last";
 
-        public string Middle => "middle";
+        public static string Middle => "middle";
     }
 }

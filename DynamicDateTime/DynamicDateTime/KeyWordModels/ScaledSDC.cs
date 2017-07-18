@@ -3,8 +3,8 @@ namespace DynamicDateTime.KeyWordModels
 {
     public class ScaledSDC
     {
-        public string Post => "post";
+        public static string Post => "post";
 
-        public string Prior => "prior";
+        public static string Prior => "prior";
     }
 }

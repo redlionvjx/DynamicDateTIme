@@ -9,12 +9,12 @@ namespace DynamicDateTime.KeyWordModels
         /// <summary>
         /// Current
         /// </summary>
-        public string Current => "current";
+        public static string Current => "current";
 
 
-        public string Next => "next";
+        public static string Next => "next";
 
 
-        public string Preceding => "preceding";
+        public static string Preceding => "preceding";
     }
 }
