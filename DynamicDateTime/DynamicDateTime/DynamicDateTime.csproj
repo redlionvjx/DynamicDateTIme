@@ -41,8 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DateCreator.cs" />
+    <Compile Include="DateModel\DynamicDate.cs" />
+    <Compile Include="VariableModels\DayVariable.cs" />
     <Compile Include="KeyWordModels\IDateComponent.cs" />
     <Compile Include="IDateCreator.cs" />
+    <Compile Include="VariableModels\MonthVariable.cs" />
+    <Compile Include="VariableModels\QuarterVariable.cs" />
+    <Compile Include="VariableModels\WeekVariable.cs" />
+    <Compile Include="VariableModels\YearVariable.cs" />
     <Compile Include="KeyWordParsers\IKeyWordParser.cs" />
     <Compile Include="KeyWordModels\ImmediateSDC.cs" />
     <Compile Include="KeyWordModels\ScaledSDC.cs" />
@@ -52,9 +58,15 @@
     <Compile Include="KeyWordParsers\ImmediateSDCParser.cs" />
     <Compile Include="KeyWordParsers\ScaledSDCParser.cs" />
     <Compile Include="KeyWordParsers\SpecialSDCParser.cs" />
-    <Compile Include="KeyWordParsers\SstandDateComponentParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VariableParsers\DayParser.cs" />
+    <Compile Include="VariableParsers\IVariableParser.cs" />
+    <Compile Include="VariableParsers\MonthParser.cs" />
+    <Compile Include="VariableParsers\QuarterParser.cs" />
+    <Compile Include="VariableParsers\WeekParser.cs" />
+    <Compile Include="VariableParsers\YearParser.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
