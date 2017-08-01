@@ -40,24 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DateCreator.cs" />
     <Compile Include="DateModel\DynamicDate.cs" />
     <Compile Include="VariableModels\DayVariable.cs" />
-    <Compile Include="KeyWordModels\IDateComponent.cs" />
-    <Compile Include="IDateCreator.cs" />
     <Compile Include="VariableModels\MonthVariable.cs" />
     <Compile Include="VariableModels\QuarterVariable.cs" />
     <Compile Include="VariableModels\WeekVariable.cs" />
     <Compile Include="VariableModels\YearVariable.cs" />
-    <Compile Include="KeyWordParsers\IKeyWordParser.cs" />
-    <Compile Include="KeyWordModels\ImmediateSDC.cs" />
-    <Compile Include="KeyWordModels\ScaledSDC.cs" />
-    <Compile Include="KeyWordModels\SpecialSDC.cs" />
-    <Compile Include="KeyWordModels\StandardDateComponent.cs" />
-    <Compile Include="DateParser.cs" />
-    <Compile Include="KeyWordParsers\ImmediateSDCParser.cs" />
-    <Compile Include="KeyWordParsers\ScaledSDCParser.cs" />
-    <Compile Include="KeyWordParsers\SpecialSDCParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VariableParsers\DayParser.cs" />
     <Compile Include="VariableParsers\IVariableParser.cs" />

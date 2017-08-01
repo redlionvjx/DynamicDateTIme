@@ -56,12 +56,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DependendDateUnitTest.cs" />
-    <Compile Include="ImmediateSDCUnitTest.cs" />
-    <Compile Include="ScaledSDCUnitTest.cs" />
-    <Compile Include="SDCUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpecialSDCUnitTest.cs" />
     <Compile Include="VariableTests\DayVariableTest.cs" />
     <Compile Include="VariableTests\MonthVariableTest.cs" />
     <Compile Include="VariableTests\QuarterVariableTest.cs" />
