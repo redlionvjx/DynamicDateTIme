@@ -4,14 +4,14 @@ using DynamicDateTime.VariableModels;
 
 namespace DynamicDateTime.VariableParsers
 {
-    public class DayParser : IVariableParser
+    public static class DayParser
     {
         /// <summary>
         /// Parse the day variable
         /// </summary>
         /// <param name="dateVariable">The string to parse</param>
         /// <returns>Returns a dynamic date with the parsed date</returns>
-        public DynamicDate ParseVariable(string dateVariable)
+        public static DynamicDate ParseVariable(string dateVariable)
         {
             if (!ShouldParseVariable(dateVariable))
             {
@@ -41,7 +41,7 @@ namespace DynamicDateTime.VariableParsers
         /// </summary>
         /// <param name="dateVariable">The string to parse</param>
         /// <returns>Returns true if the date variable is parsable</returns>
-        public bool ShouldParseVariable(string dateVariable)
+        public static bool ShouldParseVariable(string dateVariable)
         {
             if (string.IsNullOrWhiteSpace(dateVariable)) return false;
 
@@ -55,7 +55,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseToday()
+        private static DynamicDate ParseToday()
         {
             return new DynamicDate()
             {
@@ -67,7 +67,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseYesterday()
+        private static DynamicDate ParseYesterday()
         {
             return new DynamicDate()
             {
@@ -79,7 +79,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseTomorrow()
+        private static DynamicDate ParseTomorrow()
         {
             return new DynamicDate()
             {

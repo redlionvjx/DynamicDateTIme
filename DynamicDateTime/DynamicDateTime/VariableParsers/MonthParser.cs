@@ -4,14 +4,14 @@ using DynamicDateTime.VariableModels;
 
 namespace DynamicDateTime.VariableParsers
 {
-    public class MonthParser : IVariableParser
+    public static class MonthParser
     {
         /// <summary>
         /// Parse the month variable
         /// </summary>
         /// <param name="dateVariable"></param>
         /// <returns>Returns a dynamic date with the parsed date</returns>
-        public DynamicDate ParseVariable(string dateVariable)
+        public static DynamicDate ParseVariable(string dateVariable)
         {
             if (!ShouldParseVariable(dateVariable))
             {
@@ -50,7 +50,7 @@ namespace DynamicDateTime.VariableParsers
         /// </summary>
         /// <param name="dateVariable"></param>
         /// <returns>Returns true if the date variable is parsable</returns>
-        public bool ShouldParseVariable(string dateVariable)
+        public static bool ShouldParseVariable(string dateVariable)
         {
             if (string.IsNullOrWhiteSpace(dateVariable)) return false;
 
@@ -67,7 +67,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseCurrentMonth()
+        private static DynamicDate ParseCurrentMonth()
         {
             return new DynamicDate()
             {
@@ -79,7 +79,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseNextMonth()
+        private static DynamicDate ParseNextMonth()
         {
             return new DynamicDate()
             {
@@ -91,7 +91,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseLastMonth()
+        private static DynamicDate ParseLastMonth()
         {
             return new DynamicDate()
             {
@@ -103,7 +103,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseMidMonth()
+        private static DynamicDate ParseMidMonth()
         {
             var currentDate = DateTime.Today;
 
@@ -117,7 +117,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseStartMonth()
+        private static DynamicDate ParseStartMonth()
         {
             var currentDate = DateTime.Today;
 
@@ -131,7 +131,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseEndMonth()
+        private static DynamicDate ParseEndMonth()
         {
             var currentDate = DateTime.Today;
             var lastDay = DateTime.DaysInMonth(DateTime.Today.Year, DateTime.Today.Month);

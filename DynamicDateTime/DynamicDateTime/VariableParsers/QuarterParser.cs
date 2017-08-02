@@ -4,14 +4,14 @@ using DynamicDateTime.VariableModels;
 
 namespace DynamicDateTime.VariableParsers
 {
-    public class QuarterParser : IVariableParser
+    public static class QuarterParser
     {
         /// <summary>
         /// Parse the quarter variable
         /// </summary>
         /// <param name="dateVariable"></param>
         /// <returns></returns>
-        public DynamicDate ParseVariable(string dateVariable)
+        public static DynamicDate ParseVariable(string dateVariable)
         {
             if(!ShouldParseVariable(dateVariable))
             {
@@ -38,7 +38,7 @@ namespace DynamicDateTime.VariableParsers
         /// </summary>
         /// <param name="dateVariable"></param>
         /// <returns></returns>
-        public bool ShouldParseVariable(string dateVariable)
+        public static bool ShouldParseVariable(string dateVariable)
         {
             if (string.IsNullOrWhiteSpace(dateVariable)) return false;
 
@@ -47,7 +47,7 @@ namespace DynamicDateTime.VariableParsers
                     dateVariable.Equals(QuarterVariable.NextQuarter, StringComparison.InvariantCultureIgnoreCase));
         }
 
-        private DynamicDate ParseNextQuarter()
+        private static DynamicDate ParseNextQuarter()
         {
             return new DynamicDate()
             {
@@ -55,7 +55,7 @@ namespace DynamicDateTime.VariableParsers
             };
         }
 
-        private DynamicDate ParseLastQuarter()
+        private static DynamicDate ParseLastQuarter()
         {
             return new DynamicDate()
             {
