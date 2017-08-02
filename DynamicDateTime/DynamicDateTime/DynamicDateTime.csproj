@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DateModel\DynamicDate.cs" />
+    <Compile Include="DynamicParser.cs" />
     <Compile Include="VariableModels\DayVariable.cs" />
     <Compile Include="VariableModels\MonthVariable.cs" />
     <Compile Include="VariableModels\QuarterVariable.cs" />

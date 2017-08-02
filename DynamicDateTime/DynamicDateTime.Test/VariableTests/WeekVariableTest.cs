@@ -10,39 +10,34 @@ namespace DynamicDateTime.Test.VariableTests
         [Test, Category("WeekVariable")]
         public void ShouldParseEmpty()
         {
-            var weekParser = new WeekParser();
-            Assert.IsFalse(weekParser.ShouldParseVariable(""));
+            Assert.IsFalse(WeekParser.ShouldParseVariable(""));
         }
 
         [Test, Category("WeekVariable")]
         public void ShouldParseSpace()
         {
-            var weekParser = new WeekParser();
-            Assert.IsFalse(weekParser.ShouldParseVariable(" "));
+            Assert.IsFalse(WeekParser.ShouldParseVariable(" "));
         }
 
         [Test, Category("WeekVariable")]
         public void ShouldParseFalseString()
         {
-            var weekParser = new WeekParser();
-            Assert.IsFalse(weekParser.ShouldParseVariable("weekWeek"));
+            Assert.IsFalse(WeekParser.ShouldParseVariable("weekWeek"));
         }
 
         [Test, Category("WeekVariable")]
-        public void NextQuarterTest()
+        public void NextWeekTest()
         {
-            var weekParser = new WeekParser();
             var expectedDate = DateTime.Today.AddDays(7);
-            var actualDate = weekParser.ParseVariable("nextweek");
+            var actualDate = WeekParser.ParseVariable("nextweek");
             Assert.AreEqual(expectedDate, actualDate.Date);
         }
 
         [Test, Category("WeekVariable")]
-        public void LastQuarterTest()
+        public void LastWeekTest()
         {
-            var weekParser = new WeekParser();
             var expectedDate = DateTime.Today.AddDays(-7);
-            var actualDate = weekParser.ParseVariable("lastweek");
+            var actualDate = WeekParser.ParseVariable("lastweek");
             Assert.AreEqual(expectedDate, actualDate.Date);
         }
     }

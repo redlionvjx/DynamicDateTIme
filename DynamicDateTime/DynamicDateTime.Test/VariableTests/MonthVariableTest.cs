@@ -11,87 +11,77 @@ namespace DynamicDateTime.Test.VariableTests
         [Test, Category("MonthVariable")]
         public void ShouldParseEmpty()
         {
-            var monthParser = new MonthParser();
-            Assert.IsFalse(monthParser.ShouldParseVariable(""));
+            Assert.IsFalse(MonthParser.ShouldParseVariable(""));
         }
 
         [Test, Category("MonthVariable")]
         public void ShouldParseSpace()
         {
-            var monthParser = new MonthParser();
-            Assert.IsFalse(monthParser.ShouldParseVariable(" "));
+            Assert.IsFalse(MonthParser.ShouldParseVariable(" "));
         }
 
         [Test, Category("MonthVariable")]
         public void ShouldParseFalseString()
         {
-            var monthParser = new MonthParser();
-            Assert.IsFalse(monthParser.ShouldParseVariable("MonthMonth"));
+            Assert.IsFalse(MonthParser.ShouldParseVariable("MonthMonth"));
         }
 
         [Test, Category("MonthVariable")]
         public void CurrentMonthTest()
         {
-            var monthParser = new MonthParser();
             var expectedDate = DateTime.Today;
-            var actualDate = monthParser.ParseVariable("CurrentMonth");
+            var actualDate = MonthParser.ParseVariable("CurrentMonth");
             Assert.AreEqual(expectedDate, actualDate.Date);
         }
 
         [Test, Category("MonthVariable")]
         public void LastMonthTest()
         {
-            var monthParser = new MonthParser();
             var expectedDate = DateTime.Today.AddMonths(-1);
-            var actualDate = monthParser.ParseVariable("lastmonth");
+            var actualDate = MonthParser.ParseVariable("lastmonth");
             Assert.AreEqual(expectedDate, actualDate.Date);
         }
 
         [Test, Category("MonthVariable")]
         public void NextMonthTest()
         {
-            var monthParser = new MonthParser();
             var expectedDate = DateTime.Today.AddMonths(1);
-            var actualDate = monthParser.ParseVariable("nextmonth");
+            var actualDate = MonthParser.ParseVariable("nextmonth");
             Assert.AreEqual(expectedDate, actualDate.Date);
         }
 
         [Test, Category("MonthVariable")]
         public void MidMonthTest()
         {
-            var monthParser = new MonthParser();
             var currentDate = DateTime.Today;
             var expectedDate = new DateTime(currentDate.Year, currentDate.Month, 15);
-            var actualDate = monthParser.ParseVariable("midmonth");
+            var actualDate = MonthParser.ParseVariable("midmonth");
             Assert.AreEqual(expectedDate, actualDate.Date);
         }
 
         [Test, Category("MonthVariable")]
         public void StartMonthTest()
         {
-            var monthParser = new MonthParser();
             var currentDate = DateTime.Today;
             var expectedDate = new DateTime(currentDate.Year, currentDate.Month, 1);
-            var actualDate = monthParser.ParseVariable("startmonth");
+            var actualDate = MonthParser.ParseVariable("startmonth");
             Assert.AreEqual(expectedDate, actualDate.Date);
         }
 
         [Test, Category("MonthVariable")]
         public void EndMonthTest()
         {
-            var monthParser = new MonthParser();
             var currentDate = DateTime.Today;
             var lastDay = DateTime.DaysInMonth(DateTime.Today.Year, DateTime.Today.Month);
             var expectedDate = new DateTime(currentDate.Year, currentDate.Month, lastDay);
-            var actualDate = monthParser.ParseVariable("endmonth");
+            var actualDate = MonthParser.ParseVariable("endmonth");
             Assert.AreEqual(expectedDate, actualDate.Date);
         }
 
         [Test, Category("MonthVariable")]
         public void MonthErrorTest()
         {
-            var monthParser = new MonthParser();
-            var actualDate = monthParser.ParseVariable("MonthMonth");
+            var actualDate = MonthParser.ParseVariable("MonthMonth");
             Assert.AreEqual(actualDate.Error, "Incorrect Month Variable. Could not parse Month Variable = 'MonthMonth'");
         }
     }

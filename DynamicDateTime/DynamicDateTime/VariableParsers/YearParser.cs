@@ -4,14 +4,14 @@ using DynamicDateTime.VariableModels;
 
 namespace DynamicDateTime.VariableParsers
 {
-    public class YearParser : IVariableParser
+    public static class YearParser
     {
         /// <summary>
         /// Parse the year variable
         /// </summary>
         /// <param name="dateVariable">The string to parse</param>
         /// <returns>Returns a dynamic date with the parsed date</returns>
-        public DynamicDate ParseVariable(string dateVariable)
+        public static DynamicDate ParseVariable(string dateVariable)
         {
             if (!ShouldParseVariable(dateVariable))
             {
@@ -59,7 +59,7 @@ namespace DynamicDateTime.VariableParsers
         /// </summary>
         /// <param name="dateVariable">The string to parse</param>
         /// <returns>Returns true if the date variable is parsable</returns>
-        public bool ShouldParseVariable(string dateVariable)
+        public static bool ShouldParseVariable(string dateVariable)
         {
             if (string.IsNullOrWhiteSpace(dateVariable)) return false;
 
@@ -79,7 +79,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseCurrentYear()
+        private static DynamicDate ParseCurrentYear()
         {
             return new DynamicDate()
             {
@@ -91,7 +91,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseNextYear()
+        private static DynamicDate ParseNextYear()
         {
             return new DynamicDate()
             {
@@ -103,7 +103,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseLastYear()
+        private static DynamicDate ParseLastYear()
         {
             return new DynamicDate()
             {
@@ -115,7 +115,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseStartYear()
+        private static DynamicDate ParseStartYear()
         {
             var currentDate = DateTime.Today;
 
@@ -129,7 +129,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseEndYear()
+        private static DynamicDate ParseEndYear()
         {
             var currentDate = DateTime.Today;
 
@@ -143,7 +143,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseEndLastYear()
+        private static DynamicDate ParseEndLastYear()
         {
             var currentDate = DateTime.Today.AddYears(-1);
 
@@ -157,7 +157,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseEndNextYear()
+        private static DynamicDate ParseEndNextYear()
         {
             var currentDate = DateTime.Today.AddYears(1);
 
@@ -171,7 +171,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseStartLastYear()
+        private static DynamicDate ParseStartLastYear()
         {
             var currentDate = DateTime.Today.AddYears(-1);
 
@@ -185,7 +185,7 @@ namespace DynamicDateTime.VariableParsers
         /// Returns a DynamicDate with Today's date
         /// </summary>
         /// <returns>DynamicDate object</returns>
-        private DynamicDate ParseStartNextYear()
+        private static DynamicDate ParseStartNextYear()
         {
             var currentDate = DateTime.Today.AddYears(1);
 
