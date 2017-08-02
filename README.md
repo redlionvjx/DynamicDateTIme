@@ -19,8 +19,8 @@ Dynamic date parses known date variables/keywords:
 | `MidMonth`  | 15th of the month  | 8/2/2017 | 8/15/2017 |
 | `StartMonth`  | 1st of the month  | 8/2/2017 | 8/1/2017 |
 | `EndMonth`  | Last of the month  | 8/2/2017 | 8/31/2017 |
-| `NextQuarter`  | 90 days after today  | 8/2/2017 | 10/31/2017 |
-| `LastQuarter`  | 90 days before today  | 8/2/2017 | 5/4/2017 |
+| `NextQuarter`  | 90 days before today  | 8/2/2017 | 10/31/2017 |
+| `LastQuarter`  | 90 days after today  | 8/2/2017 | 5/4/2017 |
 | `CurrentYear`  | Current year  | 8/2/2017 | 8/2/2017 |
 | `NextYear`  | 1 year after today  | 8/2/2017 | 8/2/2018 |
 | `LastYear`  | 1 year before today  | 8/2/2017 | 8/12/2016 |
