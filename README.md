@@ -1,5 +1,5 @@
 # DynamicDateTIme
-Library to aid testers create dynamic date times based on key words. 
+Library to aid testers create dynamic date times based on variables/keywords. 
 
 ### Nuget is available at https://www.nuget.org/packages/DynamicDateTime/1.0.0
 
@@ -31,7 +31,7 @@ Dynamic date parses known date variables/keywords:
 | `EndNextYear`  | End of 1 year after today  | 8/2/2017 | 12/31/2018 |
 | `EndLastYear`  | End of 1 year before today  | 8/2/2017 | 12/31/2016 |
 
-Use the DynamicParser to parse keywords or use the variable parsers individually:
+Use the DynamicParser to parse variables/keywords or use the variable parsers individually:
 
 ```
 DateTime expectedDate = DateTime.Today;
