@@ -33,8 +33,16 @@ Dynamic date parses known date variables/keywords:
 
 Use the DynamicParser to parse keywords or use the variable parsers individually:
 
-`var actualDate = DynamicParser.GetDate(MonthVariable.CurrentMonth);`
+```
+DateTime expectedDate = DateTime.Today;
+DynamicDate actualDate = DynamicParser.GetDate(MonthVariable.CurrentMonth);
+Assert.AreEqual(expectedDate, actualDate.Date);
+```
 
 or 
 
-`var actualDate = DayParser.ParseVariable("tomorrow");`
+```
+DateTime expectedDate = DateTime.Today.AddDays(1);
+DynamicDate actualDate = DayParser.ParseVariable("tomorrow");
+Assert.AreEqual(expectedDate, actualDate.Date);
+```
