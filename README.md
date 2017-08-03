@@ -1,4 +1,4 @@
-# DynamicDateTIme
+# DynamicDateTime
 Library to aid testers create dynamic date times based on variables/keywords. 
 
 ### Nuget is available at https://www.nuget.org/packages/DynamicDateTime/1.0.0
