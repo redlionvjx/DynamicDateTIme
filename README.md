@@ -47,7 +47,7 @@ DynamicDate actualDate = DayParser.ParseVariable("tomorrow");
 Assert.AreEqual(expectedDate, actualDate.Date);
 ```
 
-## Drive your Date related tests from a datasource
+## Drive your date related tests from a datasource
 The freedom here is the abilitiy to datadrive the dates as you would any other parameter in a parameterized test. Simply move your hardcoded date out of test script and parameterize your test date. 
 
 ```
@@ -55,7 +55,7 @@ The freedom here is the abilitiy to datadrive the dates as you would any other p
 public void TestDate(String date)
 {
   ...
-  DynamicDate actualDate = DynamicParser.GetDate(Date);
+  DynamicDate actualDate = DynamicParser.GetDate(date);
 }
 
 
