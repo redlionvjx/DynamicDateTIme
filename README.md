@@ -56,6 +56,7 @@ public void TestDate(String date)
 {
   ...
   DynamicDate actualDate = DynamicParser.GetDate(date);
+  ...
 }
 
 
