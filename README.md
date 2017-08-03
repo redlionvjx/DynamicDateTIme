@@ -1,5 +1,5 @@
 # DynamicDateTime
-Sometimes we need dynamically generated dates for our automated tests. This library will aid testers in create dynamic date times based on variables/keywords. 
+Sometimes we need dynamically generated dates for our automated tests. This library will aid testers in generating dynamic date times based on variables/keywords. 
 
 ### Nuget is available at https://www.nuget.org/packages/DynamicDateTime/1.0.0
 
