@@ -1,5 +1,5 @@
 # DynamicDateTime
-Library to aid testers create dynamic date times based on variables/keywords. 
+Sometimes we need dynamically generated dates for our automated tests. This library will aid testers in create dynamic date times based on variables/keywords. 
 
 ### Nuget is available at https://www.nuget.org/packages/DynamicDateTime/1.0.0
 
@@ -46,3 +46,16 @@ DateTime expectedDate = DateTime.Today.AddDays(1);
 DynamicDate actualDate = DayParser.ParseVariable("tomorrow");
 Assert.AreEqual(expectedDate, actualDate.Date);
 ```
+
+## Drive your Date related tests from a datasource
+The freedom here is the abilitiy to datadrive the dates as you would any other parameter in a parameterized test. Simply move your hardcoded date out of test script and parameterize your test date. 
+
+```
+[SomeDataSource]
+public void TestDate(String date)
+{
+  ...
+  DynamicDate actualDate = DynamicParser.GetDate(Date);
+}
+
+
