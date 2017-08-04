@@ -48,7 +48,7 @@ Assert.AreEqual(expectedDate, actualDate.Date);
 ```
 
 ## Drive your date related tests from a datasource
-The freedom here is the abilitiy to datadrive the dates as you would any other parameter in a parameterized test. Simply move your hardcoded date out of test script and parameterize your test date. 
+Datadrive the dates as you would any other parameter in a parameterized test. Move your hardcoded date out of test script and parameterize your test date. 
 
 ```
 [SomeDataSource]
